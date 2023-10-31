@@ -58,28 +58,34 @@ export default function FlightForm({ addFunc, submitUpdateFunc, selectedFlight, 
     
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{ padding: '10px' }}>
             <label>
-                Destination:
-                <input type="text" value={destination} onChange={e => setDestination(e.target.value)} />
+                Destination: 
+                <input type="text" value={destination} onChange={e => setDestination(e.target.value)} style={{ marginLeft: '10px' }} />
             </label><br />
+    
             <label>
-                Departure Date:
-                <input type="text" value={departureDate} onChange={e => setDepartureDate(e.target.value)} />
+                Departure Date: 
+                <input type="text" value={departureDate} onChange={e => setDepartureDate(e.target.value)} style={{ marginLeft: '10px' }} />
             </label><br />
+    
             <label>
-                Departure Time:
-                <input type="text" value={departureTime} onChange={e => setDepartureTime(e.target.value)} />
+                Departure Time: 
+                <input type="text" value={departureTime} onChange={e => setDepartureTime(e.target.value)} style={{ marginLeft: '10px' }} />
             </label><br />
+    
             <label>
-                Airport:
-                <input type="text" value={airport} onChange={e => setAirport(e.target.value)} />
+                Airport: 
+                <input type="text" value={airport} onChange={e => setAirport(e.target.value)} style={{ marginLeft: '10px' }} />
             </label><br />
-            <label>
-                Number of Seats:
-                <input type="number" value={noOfSeats} onChange={e => setNoOfSeats(e.target.value)} />
+    
+            <label >
+                Number of Seats: 
+                <input type="number" value={noOfSeats} onChange={e => setNoOfSeats(e.target.value)} style={{ marginLeft: '10px'}} />
             </label><br />
-
+    
             <input type="submit" value={isUpdating ? "Update Flight" : "Add Flight"} />
-        </form>);
+        </form>
+    );
+    
 }

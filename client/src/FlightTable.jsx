@@ -23,7 +23,7 @@ function FlightRow({flight, deleteFunc, setFlightToUpdate}) {
             <td>{flight.noOfSeats}</td>
             <td>
                 <button onClick={handleUpdate}>Update</button>
-                <button onClick={handleDelete}>Delete</button>
+                <button onClick={handleDelete} style={{ marginLeft: '5px', gap:"2px" }}>Delete</button>
             </td>
         </tr>
     );
